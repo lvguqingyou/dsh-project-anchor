@@ -1,6 +1,6 @@
 {
   "name": "dsh-project-anchor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "项目锚定：新会话第一条消息自动判定项目归属并注入项目上下文，附台账索引、页签 UI 与视图重建（DeepSeek Harness 插件）",
   "license": "MIT",
   "author": "lvguqingyou",
