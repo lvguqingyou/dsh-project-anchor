@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Project anchor",
+    "description": "Ties sessions to projects: the first message of a new session is matched to a project automatically and that project's card (period, settled conventions, no-go zones, resume point) is injected as context; conclusions land in a cross-session searchable index. Auto-attach appends one row to _台账/归属.jsonl, so the workspace must be writable. The injection-detail switch lasts for the current run only."
+  }
+}

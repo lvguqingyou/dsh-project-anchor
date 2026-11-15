@@ -1,0 +1,71 @@
+{
+  "name": "dsh-project-anchor",
+  "version": "0.2.0",
+  "description": "项目锚点：会话 ↔ 项目归属、成果索引与视图重建",
+  "license": "MIT",
+  "author": "lvguqingyou",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "project",
+    "index",
+    "session"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvguqingyou/dsh-project-anchor.git"
+  },
+  "homepage": "https://github.com/lvguqingyou/dsh-project-anchor#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "files": [
+    "src/index.js",
+    "src/ledger.js",
+    "src/match.js",
+    "src/render.js",
+    "src/settings.js",
+    "src/store.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/plugin.test.mjs && node test/contract.test.mjs && node test/match.test.mjs && node test/apply.test.mjs"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.2"
+  }
+}
