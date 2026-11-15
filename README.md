@@ -16,14 +16,14 @@ work clearly belongs nowhere it asks once whether to register a new project.
 与宿主共享实例，写在 `peerDependencies` + `devDependencies`，不要装成独立依赖。
 
 ```bash
-# 从 GitHub 装（按 release tag，可复现）
+# 从 npm 装（推荐）
+#   plugin_manager install_bundle { target: "dsh-project-anchor@0.2.0" }
+
+# 从 GitHub 装（按 release tag，可复现；npm 不可达时用）
 #   plugin_manager install_bundle { target: "git+https://github.com/lvguqingyou/dsh-project-anchor.git#v0.2.0" }
 
 # 本地 tarball（先 npm pack）
 dsh plugin install ./dsh-project-anchor-0.2.0.tgz
-
-# 或直接用 plugin_manager 工具装 bundle
-#   plugin_manager install_bundle { target: "dsh-project-anchor@0.2.0" }
 ```
 
 装完用 `project_ping` 确认宿主侧已加载（`live: true`、`indexRows` 非 0、`ledger.route.status === 'registered'`）。

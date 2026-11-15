@@ -1,7 +1,7 @@
 {
   "name": "dsh-project-anchor",
   "version": "0.2.0",
-  "description": "项目锚点：会话 ↔ 项目归属、成果索引与视图重建",
+  "description": "项目锚定：新会话第一条消息自动判定项目归属并注入项目上下文，附台账索引、页签 UI 与视图重建（DeepSeek Harness 插件）",
   "license": "MIT",
   "author": "lvguqingyou",
   "type": "module",
@@ -28,6 +28,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lvguqingyou/dsh-project-anchor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lvguqingyou/dsh-project-anchor/issues"
   },
   "homepage": "https://github.com/lvguqingyou/dsh-project-anchor#readme",
   "dsh": {
